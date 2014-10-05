@@ -2,7 +2,7 @@ var tessel = require('tessel');
 var ambientlib = require('ambient-attx4');
 
 var light_trigger_level = 0.04;
-var sound_trigger_level = 0.1;
+var sound_trigger_level = 0.05;
 
 var ambient = ambientlib.use(tessel.port['A']);
 ambient.on('ready', function () {
@@ -36,7 +36,7 @@ ambient.on('ready', function () {
 
   // Set a sound level trigger
   // The trigger is a float between 0 and 1
-  ambient.setSoundTrigger(sound_level_trigger);
+  ambient.setSoundTrigger(sound_trigger_level);
 
   ambient.on('sound-trigger', function(data) {
     console.log("Something happened with sound: ", data);
