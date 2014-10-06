@@ -2,10 +2,10 @@ var tessel = require('tessel');
 var ambientlib = require('ambient-attx4');
 
 // Config
-var light_trigger_level = 0.06;
+var light_trigger_level = 0.03;
 var sound_trigger_level = 0.05;
 var poll_time = 500; // ms
-var led_light_time = 500; // ms
+var led_light_time = 1000; // ms
 
 // LED references
 var leds = [
